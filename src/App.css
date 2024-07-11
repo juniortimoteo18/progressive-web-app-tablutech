@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 *{
     margin: 0;
     padding: 0;
@@ -19,10 +20,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 /*conteudo principal*/
 .mainContent {
+    width: 380px;
     flex: 1;
     padding: 20px;
     text-align: center;
@@ -30,7 +32,15 @@ body {
 .mainContent h4 {
     margin-top: 28px ;
 }
+.mainContent p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
 
+.hRegister {
+    margin-bottom: 10px;
+    text-align: left;
+}
 
 .pCard {
     margin-top: 28px;
@@ -75,15 +85,70 @@ li p {
     outline: none;
 }
 
-.btn-start {
+/* Container for the select and input */
+.contact-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Select field */
+/* Select field with icons */
+.contact-container select {
+    width: 20%;
+    height: 40px;
+    border: 1px solid #FF5B00;
+    border-radius: 8px;
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding-left: 10px;
+    appearance: none; /* Remove default arrow */
+    position: relative;
+}
+
+.contact-container select option[value="phone"]::before {
+    content: '\f095'; /* FontAwesome icon for phone */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.contact-container select option[value="email"]::before {
+    content: '\f0e0'; /* FontAwesome icon for envelope */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+
+/* Input field */
+.contact-container input {
+    width: 80%;
+    height: 40px;
+    border: 1px solid #FF5B00;
+    border-radius: 8px;
+    outline: none;
+    padding-left: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
     margin-top: 28px;
-    width: 100%;
+}
+
+.btn-start {
+    width: 48%;
     height: 40px;
     background-color: #FF5B00;
     color: #FFE6D9;
     border: none;
     border-radius: 8px;
 }
+
 .navigation {
     flex: 2;
     align-items: center;
@@ -109,4 +174,35 @@ li p {
 .footer img {
     max-width: 100px;
     height: auto;
+}
+
+@media (max-width: 375px) {
+    .mainContent {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .btn-start {
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    .insertdt {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .footer img {
+        max-width: 80px;
+    }
+
+    .contact-container select, .contact-container input {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

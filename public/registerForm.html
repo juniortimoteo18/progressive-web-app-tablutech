@@ -2,28 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" contGegidy, initial-scale=1.0">
     <title>Register Form</title>
+    <link rel="stylesheet" href="../src/App.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h4>Registrar</h4>
-    <p>Lorem Ipsum simply text of the printing and typesetting industry</p>
     <div class="wrapper">
         <div class="mainContent">
-            <div class="slide">
-                <img clsas="iconAgil" src="../public/logoAgil.png"
-                srcset="../public/logoAgil.png 1500w, ../public/logoAgil.png 2000w"
-                size="{max-width: 200px} 64px, {max-width: 600px} 128px"/>
-                <p class="pCard">Para manter se conectado insira suas credenciais</p>
-            </div>
+            <h4 class="hRegister">Registrar</h4>
+            <p>Lorem Ipsum simply text of the printing and typesetting industry</p>
             <div class="loginField">
                 <form action="">
-                    <input class="insertdt fst" type="text" name="telefone" placeholder="+258 87 99 80 613"><br><br>
-                    <input class="insertdt" type="password" name="senha" placeholder="Senha">
-                    <button class="btn-start" onclick=""> Entrar </button>
+                    <input class="insertdt fst" type="text" name="telefone" placeholder=""><br><br>
+                    <input class="insertdt" type="password" name="senha" placeholder="Data de Nascimento">
+                    <div class="contact-container">
+                        <select name="contacts" id="contacts">
+                            <option value="phone">&#xf095;</option>
+                            <option value="email">&#xf0e0;</option>
+                        </select>
+                        <input class="insertdt" type="text" name="contacto" placeholder="Contacto">
+                    </div>
+                    <div class="button-container">
+                        <button class="btn-start" onclick=""> Voltar </button>
+                        <button class="btn-start" onclick=""> Registrar </button>
+                    </div>
                 </form>
             </div>
         </div>
+        <div class="footer">
+            <img src="../public/logoTabluTech.png">
+        </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const select = document.getElementById('contacts');
+            const phoneIcon = '\uF095'; // FontAwesome unicode for phone
+            const emailIcon = '\uF0E0'; // FontAwesome unicode for envelope
+        
+            select.options[0].text = `${phoneIcon} Phone`;
+            select.options[1].text = `${emailIcon} Email`;
+        });
+        </script>
 </body>
 </html>
