@@ -86,82 +86,55 @@ li p {
 }
 
 /* Container for the select and input */
-.contact-container {
+.c/* Container for the rows */
+.cards {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
 }
 
-/* Select field */
-/* Select field with icons */
-.contact-container select {
-    width: 20%;
-    height: 40px;
-    border: 1px solid #FF5B00;
-    border-radius: 8px;
-    background-color: #fff;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    padding-left: 10px;
-    appearance: none; /* Remove default arrow */
-    position: relative;
-}
-
-.contact-container select option[value="phone"]::before {
-    content: '\f095'; /* FontAwesome icon for phone */
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    margin-right: 10px;
-}
-
-.contact-container select option[value="email"]::before {
-    content: '\f0e0'; /* FontAwesome icon for envelope */
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    margin-right: 10px;
-}
-
-
-/* Input field */
-.contact-container input {
-    width: 80%;
-    height: 40px;
-    border: 1px solid #FF5B00;
-    border-radius: 8px;
-    outline: none;
-    padding-left: 10px;
-}
-
-.button-container {
+/* Row container */
+.row1, .row2 {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
-    margin-top: 28px;
+    gap: 20px;
 }
 
-.btn-start {
-    width: 48%;
-    height: 40px;
-    background-color: #FF5B00;
-    color: #FFE6D9;
-    border: none;
-    border-radius: 8px;
-}
-
-.navigation {
-    flex: 2;
+/* Individual item */
+.item {
+    display: flex;
     align-items: center;
-    margin-top: 30px;
-    display: inline-flex;
+    gap: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px); /* Two items per row with space between */
 }
 
-.prev {
-    color: #FFE6D9;
-    margin-right: 10px;
+.item img {
+    width: 64px;
+    height: auto;
 }
-.next {
-    color: #FF5B00;
+
+.item p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 375px) {
+    .row1, .row2 {
+        flex-direction: column; /* Stack items on smaller screens */
+        gap: 10px; /* Smaller gap for smaller screens */
+    }
+
+    .item {
+        width: 100%; /* Full width for each item on smaller screens */
+    }
 }
 
 /*Style footer*/
