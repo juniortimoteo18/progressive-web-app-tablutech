@@ -157,6 +157,11 @@ li p {
 
 a {
     text-decoration: none;
+    
+}
+
+.start {
+    color: #f8f9fa;
 }
 
 .back {
