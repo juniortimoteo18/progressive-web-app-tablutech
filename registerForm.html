@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" contGegidy, initial-scale=1.0">
     <title>Register Form</title>
-    <link rel="stylesheet" href="../src/App.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -15,24 +15,24 @@
             <p class="pJustify">Lorem Ipsum simply text of the printing and typesetting industry</p>
             <div class="loginField">
                 <form action="">
-                    <input class="insertdt fst" type="text" name="telefone" placeholder=""><br><br>
+                    <input class="insertdt fst" type="text" name="telefone" placeholder="Nome Completo"><br><br>
                     <input class="insertdt" type="password" name="senha" placeholder="Data de Nascimento">
                     <div class="contact-container">
                         <select name="contacts" id="contacts">
-                            <option value="phone">&#xf095;</option>
-                            <option value="email">&#xf0e0;</option>
+                            <option value="phone"><span></span></option>
+                            <option value="email"><span></span></option>
                         </select>
                         <input class="insertdt" type="text" name="contacto" placeholder="Contacto">
                     </div>
                     <div class="button-container">
-                        <button class="btn-registry" onclick=""> Voltar </button>
-                        <button class="btn-registry" onclick=""> Registrar </button>
+                        <a class="btn-start" href="index.html"> Voltar </a>
+                        <a class="btn-start" href="verify.html"> Regitrar </a>
                     </div>
                 </form>
             </div>
         </div>
         <div class="footer">
-            <img src="../public/logoTabluTech.png">
+            <img src="logoTabluTech.png">
         </div>
     </div>
 
@@ -42,8 +42,8 @@
             const phoneIcon = '\uF095'; // FontAwesome unicode for phone
             const emailIcon = '\uF0E0'; // FontAwesome unicode for envelope
         
-            select.options[0].text = `${phoneIcon} Phone`;
-            select.options[1].text = `${emailIcon} Email`;
+            select.options[0].text = `${phoneIcon}`;
+            select.options[1].text = `${emailIcon}`;
         });
         </script>
 </body>
