@@ -129,6 +129,15 @@ li p {
     border: none;
     border-radius: 8px;
 }
+
+.btn-back {
+    margin-top: 28px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #FF5B00;
+    background-color: #FFE6D9;
+    border-radius: 8px;
+}
 /* Ajuste de botão */
 .button-container {
     display: flex;
@@ -148,7 +157,10 @@ li p {
 
 a {
     text-decoration: none;
-    color: #FFE6D9;
+}
+
+.back {
+    color: black;
 }
 
 .navigation {
